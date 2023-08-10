@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uber price</title>
+   
+</head>
+<body>
+  <h3>uber price calculator</h3>
+  <p>the output is on the console</p>  
+
+    <script>
+        class Uber_price{
+
+                          /*Base fare	₹60
+                            Distance fare (upto 20kms)	₹12/km
+                            Distance fare (after 20kms)	₹18/km
+                            Per minute fare	₹2 */
+            constructor(total_Km, waiting)
+            {
+                this.Travel_kilometers = total_Km;
+                this.waitingInmin = waiting;               
+            }  
+            
+            getUberPrice(km = this.Travel_kilometers)//ubers amount calculations
+            {
+                let amount;
+                if(km<=20 && km>3){
+                    amount = (km*12)
+                }
+                if(km>20){                    
+                    amount = (km*18)
+                }
+                if(km<=3){
+                    amount = 60
+                }
+                return amount             
+
+            }
+
+            waitingCharge(wc = this.waitingInmin)//waiting charges calculation
+            {
+                console.log(wc*2) 
+
+            }
+        }
+                
+        let uberrate = new Uber_price(10, 35);        
+
+               
+        console.log(uberrate.getUberPrice());
+        // console.log(uberrate)
+        console.log(uberrate.waitingCharge())
+               
+               
+
+    </script>
+    
+</body>
+</html>

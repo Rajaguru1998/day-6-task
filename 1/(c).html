@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getPG method</title>
+   
+</head>
+<body>
+   <p>Write a method getPG, which takes an array of base type Movie as its argument, and returns a new array of only those movies in the input array with a rating of "PG". You may assume the input array is full of Movie instances. The returned array need not be full.</p>  
+   <p>output is on the console</p>
+
+    <script>
+        class Movie{
+            constructor(title,studio,rating)
+            {
+                this.movieTitle = title;
+                this.movieStudio = studio;
+                this.movieRating = rating;
+            } 
+            
+            
+            getPG(data=[this.movieTitle,this.movieStudio,this.movieRating]){
+                // temp = [];
+                for(let i=0; i<data.length; i++){
+                   
+                    if(data[i]==='PG'){                        
+                        console.log(data[i])
+                    }
+                    
+                }
+                
+            }
+            
+        }
+                
+        let movie1 = new Movie('Pichaikkaran 2', 'Vijay Antony', 'PG');       
+
+                
+        console.log(movie1.getPG())
+               
+               
+
+    </script>
+    
+</body>
+</html>

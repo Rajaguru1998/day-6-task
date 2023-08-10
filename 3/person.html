@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>“person” class</title>
+   
+</head>
+<body>
+  <h3>Write a “person” class to hold all the details.</h3>
+
+  <p>the output is on the console</p>  
+
+    <script>
+        class Person{
+            constructor(name, age, city, education, gender, isalive, skills, work)
+            {
+                this.Name = name;
+                this.Age = age;
+                this.City = city || 'Chennai';
+                this.Education = education ;
+                this.gender = gender;
+                this.Isalive = isalive || 'yes';
+                this.Skills = skills
+                this.Work = work || 'studying'
+            }            
+        }
+                
+        let person = new Person('Elumalai', '28', '', 'Bsc', 'Male', true, ['html','css','js'], undefined);             
+
+                
+        console.log(person)
+               
+               
+
+    </script>
+    
+</body>
+</html>

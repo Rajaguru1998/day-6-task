@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie class with defalt rating is PG</title>
+   
+</head>
+<body>
+  <h3>The constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided.</h3>
+
+  <p>the output is on the console</p>  
+
+    <script>
+        class Movie{
+            constructor(title,studio,rating)
+            {
+                this.movieTitle = title;
+                this.movieStudio = studio;
+                this.movieRating = rating || 'PG';
+            }            
+        }
+                
+        let movie1 = new Movie('Pichaikkaran 2', 'Vijay Antony', null);             
+
+                
+        console.log(movie1)
+               
+               
+
+    </script>
+    
+</body>
+</html>
